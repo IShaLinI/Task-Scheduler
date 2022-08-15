@@ -1,0 +1,56 @@
+﻿<mah:MetroWindow x:Class="Scheduler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:Scheduler"
+        mc:Ignorable="d"
+        Title=""
+        Height="450"
+        Width="800"
+        ResizeMode="NoResize"
+        Background="#252525"
+>
+    <Grid x:Name="Main_Grid" Background="#252525">
+        <mah:MetroTabControl Background="#252525" Grid.ColumnSpan="2" >
+            <TabItem Header="Work Que" BorderBrush="#1d88bc" BorderThickness="1">
+                <Grid Background="#252525">
+                    <ListBox x:Name="lstWorkQue" Margin="10,10,10,10" BorderBrush="#1d88bc" BorderThickness="2" Loaded="WorkQueLoaded" FontSize="25" SelectionChanged="QueTaskSelected"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Add Tasks" BorderBrush="#1d88bc" BorderThickness="1">
+                <Grid Background="#252525">
+                    <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Margin="145,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="50" FontSize="16"/>
+                    <Label Content="Title:" HorizontalAlignment="Left" Margin="69,10,0,0" VerticalAlignment="Top" Width="66" Height="50" FontSize="27"/>
+                    <Label Content="Class:" HorizontalAlignment="Left" Margin="60,65,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="27"/>
+                    <ComboBox x:Name="cbxClass" HorizontalAlignment="Left" Margin="145,65,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
+                    <Label Content="Category:" HorizontalAlignment="Left" Margin="15,120,0,0" VerticalAlignment="Top" Width="125" Height="50" FontSize="27"/>
+                    <ComboBox x:Name="cbxCategory" HorizontalAlignment="Left" Margin="145,119,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
+                    <Label Content="Due Date:" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="130" Height="50" FontSize="27"/>
+                    <mah:DateTimePicker x:Name="dtpDue" HorizontalAlignment="Left" Margin="145,175,0,0" VerticalAlignment="Top" Height="50" Width="200" mah:DatePickerHelper.DropDownButtonFontSize="17"/>
+                    <Button Content="Add Task" HorizontalAlignment="Left" Margin="145,285,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="20" Click="addTask"/>
+                    <TextBox x:Name="txtLink" HorizontalAlignment="Left" Margin="145,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="50" FontSize="16"/>
+                    <Label Content="Link:" HorizontalAlignment="Left" Margin="75,230,0,0" VerticalAlignment="Top" Width="65" Height="50" FontSize="27"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Edit Tasks" BorderBrush="#1d88bc" BorderThickness="1">
+                <Grid Background="#252525">
+                    <ListBox x:Name="lstEditTasks" Margin="10,10,615,10" BorderBrush="#1d88bc" BorderThickness="2" FontSize="16" SelectionChanged="lstEditTaskChanged" Loaded="editTaskLoaded"/>
+                    <TextBox x:Name="txtEditTitle" HorizontalAlignment="Left" Margin="590,-24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="50" FontSize="16"/>
+                    <Label Content="Title:" HorizontalAlignment="Left" Margin="511,-24,0,0" VerticalAlignment="Top" Width="66" Height="50" FontSize="27"/>
+                    <Label Content="Class:" HorizontalAlignment="Left" Margin="502,31,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="27"/>
+                    <ComboBox x:Name="cbxEditClass" HorizontalAlignment="Left" Margin="590,31,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
+                    <Label Content="Category:" HorizontalAlignment="Left" Margin="456,86,0,0" VerticalAlignment="Top" Width="126" Height="50" FontSize="27"/>
+                    <ComboBox x:Name="cbxEditCategory" HorizontalAlignment="Left" Margin="590,86,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
+                    <Label Content="Due Date:" HorizontalAlignment="Left" Margin="452,141,0,0" VerticalAlignment="Top" Width="130" Height="50" FontSize="27"/>
+                    <mah:DateTimePicker x:Name="dtpEditDue" HorizontalAlignment="Left" Margin="590,141,0,0" VerticalAlignment="Top" Height="50" Width="200" mah:DatePickerHelper.DropDownButtonFontSize="17"/>
+                    <TextBox x:Name="txtEditLink" HorizontalAlignment="Left" Margin="590,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="50" FontSize="16"/>
+                    <Label Content="Link:" HorizontalAlignment="Left" Margin="517,196,0,0" VerticalAlignment="Top" Width="65" Height="50" FontSize="27"/>
+                    <Button x:Name="btnModifyTask" Content="Modify Task" HorizontalAlignment="Left" Margin="590,251,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="20" Click="modifyTask"/>
+                    <Button x:Name="btnDeleteTask" Content="Delete Task" HorizontalAlignment="Left" Margin="590,306,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="20" Click="modifyTask"/>
+                </Grid>
+            </TabItem>
+        </mah:MetroTabControl>
+    </Grid>
+</mah:MetroWindow>
