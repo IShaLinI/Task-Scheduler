@@ -48,7 +48,7 @@
                     <TextBox x:Name="txtEditLink" HorizontalAlignment="Left" Margin="590,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="50" FontSize="16"/>
                     <Label Content="Link:" HorizontalAlignment="Left" Margin="517,196,0,0" VerticalAlignment="Top" Width="65" Height="50" FontSize="27"/>
                     <Button x:Name="btnModifyTask" Content="Modify Task" HorizontalAlignment="Left" Margin="590,251,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="20" Click="modifyTask"/>
-                    <Button x:Name="btnDeleteTask" Content="Delete Task" HorizontalAlignment="Left" Margin="590,306,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="20" Click="modifyTask"/>
+                    <Button x:Name="btnDeleteTask" Content="Delete Task" HorizontalAlignment="Left" Margin="590,306,0,0" VerticalAlignment="Top" Height="50" Width="200" FontSize="20" Click="deleteTask"/>
                 </Grid>
             </TabItem>
         </mah:MetroTabControl>

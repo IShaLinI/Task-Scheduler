@@ -221,5 +221,11 @@ namespace Scheduler
         {
             updateData();
         }
+
+        private void deleteTask(object sender, RoutedEventArgs e)
+        {
+            File.Delete(@"G:\My Drive\Schedule Data\" + lstEditTasks.SelectedItem.ToString() + ".json");
+            updateData();
+        }
     }
 }
